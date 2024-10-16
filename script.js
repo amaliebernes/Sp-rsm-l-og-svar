@@ -1,4 +1,4 @@
-let userInput = document.querySelector('#user-input');
+let userInput = document.querySelector("#user-input");
 userInput.addEventListener('submit', handleSubmit);
 
 let todoListElement = document.querySelector("#todo-list");
@@ -21,15 +21,15 @@ renterTodos();
 function handleSubmit(event) {
   event.preventDefault (); 
 
-  console.log("TEST");
+
 
   let newTodo = createTodoObject (userInput);
 
-  console.log("testing");
+ 
 
   todo.push(newTodo);
 
-  console.log("update");
+  
 
   let jsonTodos = JSON.stringify(todos);
   localStorage.setItem("todos", jsonTodos);
@@ -52,5 +52,9 @@ function createTodoObject(form) {
 function createTodoCard (todoObject) {
     let todoCard = document.createElement("li");
     let titeElement = document.createElement("h1");
+    let deleteButton = document.createElement("button");
+
+    todoCard.append(titeElement);
+    todoCard.append(deleteButton);
 
 }
